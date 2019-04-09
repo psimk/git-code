@@ -53,5 +53,5 @@ const logger = (message: string, type: "log" | "info" | "error") => (
   }
 
   spinner.end();
-  cp.spawn(editor, [TEMP_DIR], { stdio: "inherit", env: process.env });
+  cp.spawn(editor, [TEMP_DIR], { stdio: "inherit", shell: true });
 })();
