@@ -8,7 +8,7 @@ git-code psimk/git-code
 ```
 
 A cli tool which allows you to clone a github repo _(more to come...)_
-into the systems **\$TEMPDIR** and open it up with your **\$EDITOR**.
+into **\$TEMPDIR** and open it up with your **\$EDITOR**.
 
 ## Installing
 
