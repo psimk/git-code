@@ -5,6 +5,7 @@ import * as cp from "child_process";
 import { v4 as uuid } from "uuid";
 import chalk from "chalk";
 import { tmpdir } from "os";
+import spinner from "./spinner";
 
 const COMMANDS = {
   check: "git --version",
@@ -51,5 +52,6 @@ const logger = (message: string, type: "log" | "info" | "error") => (
     logger(err, "error")();
   }
 
+  spinner.end();
   cp.spawn(editor, [TEMP_DIR], { stdio: "inherit" });
 })();
