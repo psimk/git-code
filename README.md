@@ -29,7 +29,7 @@ git-code {user}/{repoName}
 1. +Support for more VCS providers
 2. +Unit Tests
 3. +Proper Configuration
-4. +Fix bus
+4. +Fix bugs
 5. ???
 6. Profit, probs
 
