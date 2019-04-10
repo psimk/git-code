@@ -14,7 +14,7 @@ const COMMANDS = {
 
 const GITHUB_WEBSITE = "https://github.com";
 const TEMP_DIR = `${tmpdir}${uuid()}`;
-const EDITOR = `$EDITOR`;
+const EDITOR = process.env.EDITOR;
 
 const logger = (message: string, type: "log" | "info" | "error") => (
   ...args: any[]
@@ -53,5 +53,5 @@ const logger = (message: string, type: "log" | "info" | "error") => (
   }
 
   spinner.end();
-  cp.spawn(editor, [TEMP_DIR], { stdio: "inherit" });
+  cp.spawn(editor, [TEMP_DIR], { stdio: "inherit", shell: true });
 })();
